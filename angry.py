@@ -3,12 +3,12 @@ from blinkable import Blinkable
 from smiley import Smiley
 
 
-class Happy(Smiley, Blinkable):
+class Angry(Smiley, Blinkable):
     """
-   Provides a Smiley with a happy expression
+   Provides a Smiley with a Angry expression
     """
     def __init__(self):
-        super().__init__()
+        super().__init__(self.RED)
 
         self.draw_mouth()
         self.draw_eyes()
@@ -17,7 +17,7 @@ class Happy(Smiley, Blinkable):
         """
        Renders a mouth by blanking the pixels that form that object.
         """
-        mouth = [41, 46, 50, 51, 52, 53]
+        mouth = [49, 54, 42, 43, 44, 45, 50, 51, 52, 53]
         for pixel in mouth:
             self.pixels[pixel] = self.BLANK
 
